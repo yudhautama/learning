@@ -22,7 +22,9 @@ if(($_SESSION['username'] == 'Rismon') and ($_SESSION['userpass'] == '12345')){
             <title>Cari Film Favoritku!</title>
     </head>
     <body>
+<?php include 'header.php'; ?>
 <?php
+
 //tambahkan baris ini:
 $filmfavku = urlencode('Fast and Furious');
 
@@ -31,5 +33,18 @@ echo "<a href=\"situsfilm.php?filmfav=$filmfavku\">";
 echo 'Klik di sini untuk melihat informasi film favoritku!';
 echo '</a>';
  ?>   
+<br/>
+<br/>
+Atau pilih berapa banyak film yang Anda sukai:
+<br/>
+<form action="situsfilm.php" method="post">
+<p>Masukkan jumlah film (sampai dengan 10):
+    <input type="text" name="jum" maxlength="2" size ="2" />
+    <br>
+   Centang untuk mengurutkan secara alfabetik:
+    <input type="checkbox" name="sorted">
+</p>
+<input type="submit" name="submit" value ="Submit"/>
+</form>
     </body>
 </html>

@@ -7,6 +7,7 @@
     <title>Silahkan Log In</title>
 </head>
 <body>
+    <?php include 'header.php';?>
     <form action="film1.php" method="post">
     <p>Masukkan username Anda :
     <input type="text" name ="user"/>
